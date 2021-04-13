@@ -1,0 +1,10 @@
+version: '2.0'
+services:
+  jupyterlab:
+    image: anuras/jupyterlab:0.1
+    container_name: datascience-notebook
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    ports:
+      - 8888:8888
+    command: "start-notebook.sh --NotebookApp.base_url=/home/jovyan/work"
